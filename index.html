@@ -3,47 +3,41 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        h2{
+            font-size:38px;
+        }
         body {
             font-family: Calibri;
-            background-color: gray;
+            background-color: indianred;
         }
-
-        /* Style the tab */
         .tab {
             overflow: hidden;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
         }
-
-            /* Style the buttons inside the tab */
             .tab button {
                 background-color: inherit;
                 float: left;
+                cursor: pointer;
+                padding: 15px 20px;
+                transition: 0.3s;
+                font-size: 18px;
                 border: none;
                 outline: none;
-                cursor: pointer;
-                padding: 14px 16px;
-                transition: 0.3s;
-                font-size: 17px;
+                position:center
             }
-
-                /* Change background color of buttons on hover */
                 .tab button:hover {
-                    background-color: #ddd;
+                    background-color: #808080;
+                    transition: ease-in-out;
                 }
-
-                /* Create an active/current tablink class */
                 .tab button.active {
-                    background-color: #ccc;
+                    background-color: orangered;
                 }
-
-        /* Style the tab content */
-        .tabcontent {
+        .tabinfo {
             display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
+            padding: 7px 10px;
             border-top: none;
-            background: lightred;
+            background: lightgray;
             Line-height: 2;
         }
 
@@ -64,19 +58,20 @@
         <button class="tablinks" onclick="openCity(event, 'About')">About</button>
         <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
         <button class="tablinks" onclick="openCity(event, 'Skills')">Skills</button>
-
+        <button class="tablinks" onclick="openCity(event, 'Employment History')">Employment History</button>
+ 
     </div>
-
-    <div id="Home" class="tabcontent">
+    
+    <div id="Home" class="tabinfo">
 
         <h3>Purpose</h3>
 
-        <p>Hello Readers, the purpose of this site is to inform employers or clients about me, my personal life, and my skillsets.</p>
+        <p>Hello viewers, the purpose of this site is to inform employers or clients about me, my personal life, and my skillsets.</p>
         <H3>Introduction</H3>
         <p>My name is Derek Pham and I am a senior studying Management Information System at the Price College in the University of Oklahoma.
     </div>
 
-    <div id="About" class="tabcontent">
+    <div id="About" class="tabinfo">
 
         <h3>About Me</h3>
 
@@ -84,7 +79,7 @@
         <p>Contact me with any questions or concerns at (405)-535-6390 or dxpham99@gmail.com</p>
     </div>
 
-    <div id="Projects" class="tabcontent">
+    <div id="Projects" class="tabinfo">
 
         <h3>Projects and Experiences</h3>
 
@@ -107,22 +102,34 @@
     </div>
 
 
-    <div id="Skills" class="tabcontent">
+    <div id="Skills" class="tabinfo">
         <h3>Skillset</h3>
+        <p>Some of my knowledge on coding is listed below.</p>
+        <ul>
         <li>C#</li>
         <li>ERD</li>
         <li>Excel</li>
         <li>MySQL</li>
+        <li>Java</li>
+        <li>Visual Basic</li>
 
+        </ul>
+    </div>
+
+    <div id="Employment History" class="tabinfo">
+         <h3>History</h3>
+        <ul>
+            <li>I formerly worked part time at Golden Chick.</li>
+            <li>I am currently an intern at Tinker. We work in squadrons and my current squad is the 559SWEG. I intern System Admins learn how to manage user access into a network.</li>
         </ul>
     </div>
 
     <script>
 function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  var i, tabinfo, tablinks;
+  tabinfo = document.getElementsByClassName("tabinfo");
+  for (i = 0; i < tabinfo.length; i++) {
+    tabinfo[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
